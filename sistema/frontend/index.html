@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Login - VetSAEP</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-pagina="login">
+  <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+  <section class="tela-login">
+    <div class="card login">
+      <h1>🐾 VetSAEP</h1>
+      <p class="sub">Sistema da clínica veterinária</p>
+
+      <div class="abas" role="tablist">
+        <button type="button" class="aba ativa" id="aba-login" role="tab">Entrar</button>
+        <button type="button" class="aba" id="aba-cadastro" role="tab">Criar conta</button>
+      </div>
+      <p id="aviso" class="aviso" hidden></p>
+
+      <!-- LOGIN -->
+      <form id="form-login" autocomplete="on">
+        <label for="login-email">E-mail</label>
+        <input id="login-email" name="email" type="email" required autocomplete="username">
+        <label for="login-senha">Senha</label>
+        <input id="login-senha" name="senha" type="password" required autocomplete="current-password">
+        <div id="erro-login" class="erro-form" hidden></div>
+        <button class="btn cheio" type="submit">Entrar</button>
+        <p class="dica">Demonstração: admin@vetsaep.com / admin123</p>
+      </form>
+
+      <!-- CADASTRO DE USUÁRIO -->
+      <form id="form-cadastro" autocomplete="off" hidden>
+        <label for="cad-nome">Nome completo</label>
+        <input id="cad-nome" name="nome" type="text" required minlength="3">
+        <label for="cad-email">E-mail</label>
+        <input id="cad-email" name="email" type="email" required>
+        <label for="cad-senha">Senha (mínimo 6 caracteres)</label>
+        <input id="cad-senha" name="senha" type="password" required minlength="6" autocomplete="new-password">
+        <label for="cad-senha2">Confirmar senha</label>
+        <input id="cad-senha2" name="senha2" type="password" required minlength="6" autocomplete="new-password">
+        <div id="erro-cadastro" class="erro-form" hidden></div>
+        <button class="btn cheio" type="submit">Criar conta</button>
+      </form>
+    </div>
+  </section>
+  <script src="app.js"></script>
+</body>
+</html>

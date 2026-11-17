@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Agendamentos - VetSAEP</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-pagina="agendamentos">
+  <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+  <nav class="topo">
+    <strong class="marca">🐾 VetSAEP</strong>
+    <a href="dashboard.html" >Dashboard</a>
+    <a href="tutores.html" >Tutores</a>
+    <a href="pets.html" >Pets</a>
+    <a href="agendamentos.html" class="ativo">Agendamentos</a>
+    <span class="espaco"></span>
+    <span class="usuario">👤 <span id="usuario-nome"></span></span>
+    <button id="btn-sair" class="btn sec pequeno" type="button">Sair</button>
+  </nav>
+  <main class="conteudo">
+    <div class="titulo-pagina"><h2>Agendamentos</h2><button class="btn" id="btn-novo" type="button">+ Novo agendamento</button></div>
+    <div id="area-form"></div>
+    <div class="card">
+      <!-- Lista ordenada pela data do agendamento, com dados do agendamento, do pet e do tutor -->
+      <div class="tabela-wrap"><table>
+        <thead><tr><th>Data/Hora</th><th>Motivo</th><th>Status</th><th>Pet</th><th>Tutor</th><th></th></tr></thead>
+        <tbody id="lista"></tbody>
+      </table></div>
+    </div>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>

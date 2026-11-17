@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dashboard - VetSAEP</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-pagina="dashboard">
+  <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+  <nav class="topo">
+    <strong class="marca">🐾 VetSAEP</strong>
+    <a href="dashboard.html" class="ativo">Dashboard</a>
+    <a href="tutores.html" >Tutores</a>
+    <a href="pets.html" >Pets</a>
+    <a href="agendamentos.html" >Agendamentos</a>
+    <span class="espaco"></span>
+    <span class="usuario">👤 <span id="usuario-nome"></span></span>
+    <button id="btn-sair" class="btn sec pequeno" type="button">Sair</button>
+  </nav>
+  <main class="conteudo">
+    <h2>Dashboard</h2>
+    <p class="boas-vindas">Bem-vindo(a), <strong id="boas-vindas-nome"></strong>!</p>
+    <div class="grade-num">
+      <div class="card"><div class="num" id="n-tutores">-</div><div class="num-rotulo">Tutores</div></div>
+      <div class="card"><div class="num" id="n-pets">-</div><div class="num-rotulo">Pets</div></div>
+      <div class="card"><div class="num" id="n-agend">-</div><div class="num-rotulo">Agendamentos ativos</div></div>
+    </div>
+    <div class="card">
+      <h3>Próximos agendamentos</h3>
+      <div class="tabela-wrap"><table>
+        <thead><tr><th>Data/Hora</th><th>Pet</th><th>Tutor</th><th>Motivo</th></tr></thead>
+        <tbody id="proximos"></tbody>
+      </table></div>
+    </div>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>

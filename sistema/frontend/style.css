@@ -1,0 +1,57 @@
+:root{--verde:#1f6f54;--verde-claro:#d9f2e4;--fundo:#f3f6f4;--texto:#1d2b25;--cinza:#6b7c74;--vermelho:#b3372f;--borda:#c9d5ce}
+*{box-sizing:border-box}
+body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;background:var(--fundo);color:var(--texto)}
+[hidden]{display:none!important}
+h1,h2,h3{margin:.2em 0 .5em}
+
+.topo{background:var(--verde);color:#fff;display:flex;gap:6px;align-items:center;padding:10px 20px;flex-wrap:wrap}
+.topo a{color:#fff;text-decoration:none;padding:6px 12px;border-radius:6px;font-weight:500}
+.topo a:hover,.topo a.ativo{background:#ffffff26}
+.marca{margin-right:10px}.espaco{flex:1}.usuario{font-size:14px;margin-right:6px}
+
+.conteudo{max-width:1000px;margin:22px auto;padding:0 16px}
+.card{background:#fff;border-radius:10px;padding:18px 20px;box-shadow:0 1px 4px #0001;margin-bottom:16px}
+.titulo-pagina{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-bottom:10px}
+
+.tabela-wrap{overflow-x:auto}
+table{width:100%;border-collapse:collapse}
+th,td{text-align:left;padding:9px 8px;border-bottom:1px solid #e4eae6;vertical-align:middle}
+th{font-size:13px;color:var(--cinza);text-transform:uppercase;letter-spacing:.03em}
+td.acoes{white-space:nowrap;text-align:right}
+td small{display:block;color:var(--cinza)}
+.vazio{color:var(--cinza);text-align:center;padding:18px}
+
+.btn{display:inline-block;background:var(--verde);color:#fff;border:0;border-radius:6px;padding:9px 16px;cursor:pointer;font-size:14px;font-family:inherit}
+.btn:hover{filter:brightness(1.1)}.btn:disabled{opacity:.6;cursor:wait}
+.btn.sec{background:var(--cinza)}.btn.perigo{background:var(--vermelho)}.btn.pequeno{padding:5px 10px;font-size:13px}
+
+label{display:block;margin:12px 0 4px;font-weight:600;font-size:14px}
+input,select{width:100%;padding:9px 10px;border:1px solid var(--borda);border-radius:6px;font-size:15px;font-family:inherit;background:#fff}
+input:focus,select:focus{outline:2px solid var(--verde-claro);border-color:var(--verde)}
+.grade-form{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:0 16px}
+.linha-botoes{display:flex;gap:8px;margin-top:16px}
+.busca{display:flex;gap:8px;margin-bottom:12px}.busca input{max-width:320px}
+
+.grade-num{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:14px;margin-bottom:16px}
+.num{font-size:34px;font-weight:700;color:var(--verde)}.num-rotulo{color:var(--cinza)}
+.boas-vindas{margin-bottom:14px;color:var(--cinza)}
+
+.etiqueta{display:inline-block;padding:2px 9px;border-radius:99px;font-size:12px;font-weight:600;background:var(--verde-claro);color:var(--verde)}
+.etiqueta.realizado{background:#dbe7fb;color:#1f4c9a}.etiqueta.cancelado{background:#fbdcd9;color:var(--vermelho)}
+.info{background:#f3f6f4;border-radius:6px;padding:8px 12px;margin:0 0 6px;font-size:14px}
+
+.toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);padding:11px 18px;border-radius:8px;color:#fff;background:var(--verde);box-shadow:0 4px 14px #0003;z-index:10;max-width:90vw}
+.toast.erro{background:var(--vermelho)}
+
+/* login / cadastro */
+.tela-login{min-height:100vh;display:grid;place-items:center;padding:16px}
+.login{width:100%;max-width:400px}.login h1{text-align:center;color:var(--verde);margin-bottom:0}
+.sub{text-align:center;color:var(--cinza);margin-top:4px}.login .btn.cheio{width:100%;margin-top:18px;padding:11px}
+.abas{display:flex;gap:4px;background:var(--fundo);padding:4px;border-radius:8px;margin:14px 0 4px}
+.aba{flex:1;border:0;background:transparent;padding:8px;border-radius:6px;cursor:pointer;font-size:14px;font-family:inherit;color:var(--cinza);font-weight:600}
+.aba.ativa{background:#fff;color:var(--verde);box-shadow:0 1px 3px #0002}
+.dica{font-size:12px;color:var(--cinza);text-align:center;margin-bottom:0}
+.aviso{background:#fff3cd;border-radius:6px;padding:8px 12px;font-size:14px}
+.erro-form{background:#fbdcd9;color:var(--vermelho);border-radius:6px;padding:8px 12px;font-size:14px;margin-top:12px}
+
+@media(max-width:600px){.topo{padding:8px 10px}.conteudo{margin-top:12px}th,td{padding:7px 5px;font-size:14px}}

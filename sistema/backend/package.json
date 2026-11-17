@@ -1,0 +1,12 @@
+{
+  "name": "vetsaep-backend",
+  "version": "1.0.0",
+  "description": "API da clinica veterinaria (SAEP) - Node.js puro + SQLite, sem dependencias",
+  "main": "server.js",
+  "scripts": {
+    "start": "node --disable-warning=ExperimentalWarning server.js",
+    "test": "node --disable-warning=ExperimentalWarning testes/teste.js"
+  },
+  "engines": { "node": ">=22.13" },
+  "license": "MIT"
+}

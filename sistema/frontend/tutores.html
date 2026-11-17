@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tutores - VetSAEP</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-pagina="tutores">
+  <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+  <nav class="topo">
+    <strong class="marca">🐾 VetSAEP</strong>
+    <a href="dashboard.html" >Dashboard</a>
+    <a href="tutores.html" class="ativo">Tutores</a>
+    <a href="pets.html" >Pets</a>
+    <a href="agendamentos.html" >Agendamentos</a>
+    <span class="espaco"></span>
+    <span class="usuario">👤 <span id="usuario-nome"></span></span>
+    <button id="btn-sair" class="btn sec pequeno" type="button">Sair</button>
+  </nav>
+  <main class="conteudo">
+    <div class="titulo-pagina"><h2>Tutores</h2><button class="btn" id="btn-novo" type="button">+ Novo tutor</button></div>
+    <div id="area-form"></div>
+    <div class="card">
+      <!-- Busca: ao enviar (botão ou Enter) a tabela é atualizada só com os registros correspondentes -->
+      <form class="busca" id="form-busca">
+        <input type="search" name="q" placeholder="Buscar tutor por nome" aria-label="Buscar tutor por nome">
+        <button class="btn sec" type="submit">Buscar</button>
+      </form>
+      <div class="tabela-wrap"><table>
+        <thead><tr><th>Nome</th><th>CPF</th><th>Telefone</th><th>E-mail</th><th></th></tr></thead>
+        <tbody id="lista"></tbody>
+      </table></div>
+    </div>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
